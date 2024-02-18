@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom'
 import { render } from '@testing-library/react'
-import Main from '../Home'
+import Home from '../Home'
 
 test('Renders the main page', () => {
-  const { container } = render(<Main />)
+  const { container } = render(<Home />)
   expect(container).toMatchSnapshot()
 })

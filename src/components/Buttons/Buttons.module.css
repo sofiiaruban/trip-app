@@ -13,3 +13,7 @@
 .basic {
   background: transparent;
 }
+.buttonIcon {
+  border: none;
+  background-color: transparent;
+}
