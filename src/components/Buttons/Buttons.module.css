@@ -1,6 +1,9 @@
 .button {
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 1px solid hsl(0, 0%, 80%);
+  color: hsl(0, 0%, 20%);
 }
 
 .primary {
