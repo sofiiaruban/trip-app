@@ -15,7 +15,7 @@ const Button: FC<ButtonProps> = ({
   color = ButtonColor.PRIMARY,
   type = ButtonType.SUBMIT
 }) => {
-  const buttonClasses = classnames(styles.button, styles[`button-${color}`])
+  const buttonClasses = classnames(styles.button, styles[`${color}`])
 
   return (
     <button type={type} className={buttonClasses}>

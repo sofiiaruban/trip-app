@@ -1,15 +1,14 @@
 import { FC } from 'react'
-import './App.css'
 import Root from './Root'
 import { Route, Routes } from 'react-router-dom'
-import Main from '../pages/Main'
+import Home from '../pages/Home'
 import { AppRoutes } from './AppRoutes'
 
 const App: FC = () => {
   return (
     <Root>
       <Routes>
-        <Route path={AppRoutes.MAIN} element={<Main />} />
+        <Route path={AppRoutes.HOME} element={<Home />} />
       </Routes>
     </Root>
   )
