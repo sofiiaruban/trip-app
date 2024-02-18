@@ -1,0 +1,20 @@
+.trip {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid grey;
+}
+.tripInfo {
+  padding: 0.5rem;
+}
+.cityImg {
+  width: 30%;
+  height: 60%;
+}
+.cityName {
+  font-weight: 600;
+  font-size: 24px;
+}
+.tripDates {
+  color: grey;
+}
