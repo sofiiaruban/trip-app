@@ -1,0 +1,10 @@
+.tripsList {
+  display: flex;
+  width: 50%;
+  gap: 0.5rem;
+}
+.addTripItem {
+  background-color: beige;
+  width: 30%;
+  height: 60%;
+}
