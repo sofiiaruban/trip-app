@@ -1,13 +1,8 @@
 import { FC } from 'react'
 import styles from './TripItem.module.css'
-import { TripProps } from '../types'
+import { Trip } from '../../../types'
 
-const TripItem: FC<TripProps> = ({
-  cityImgSrc,
-  cityName,
-  startDate,
-  endDate
-}) => {
+const TripItem: FC<Trip> = ({ cityImgSrc, cityName, startDate, endDate }) => {
   const formattedStartDate = startDate.toLocaleDateString()
   const formattedEndDate = endDate.toLocaleDateString()
 
