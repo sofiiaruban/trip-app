@@ -2,7 +2,8 @@
 
 exports[`Renders the main page 1`] = `
 <div>
-  <div
+  <main
+    class="home"
     data-testid="mainPage"
   >
     <div>
@@ -39,6 +40,130 @@ exports[`Renders the main page 1`] = `
         </button>
       </div>
     </div>
-  </div>
+    <ul
+      class="tripsList"
+    >
+      <li>
+        <article
+          class="trip"
+        >
+          <img
+            alt="New York city"
+            class="cityImg"
+            src="https://github.com/sofiiaruban/delivery-app/assets/37212452/d5c5a07f-e0e3-4731-aec2-905b550f0137"
+          />
+          <div
+            class="tripInfo"
+          >
+            <p
+              class="cityName"
+            >
+              New York
+            </p>
+            <p
+              class="tripDates"
+            >
+              <span>
+                3/1/2024
+              </span>
+               - 
+              <span>
+                3/5/2024
+              </span>
+            </p>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article
+          class="trip"
+        >
+          <img
+            alt="London city"
+            class="cityImg"
+            src="https://github.com/sofiiaruban/delivery-app/assets/37212452/6ddc7f4c-8b48-4146-890f-fc5124892c7a"
+          />
+          <div
+            class="tripInfo"
+          >
+            <p
+              class="cityName"
+            >
+              London
+            </p>
+            <p
+              class="tripDates"
+            >
+              <span>
+                4/10/2024
+              </span>
+               - 
+              <span>
+                4/15/2024
+              </span>
+            </p>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article
+          class="trip"
+        >
+          <img
+            alt="Kyiv city"
+            class="cityImg"
+            src="https://github.com/sofiiaruban/delivery-app/assets/37212452/22af8aca-39f2-481a-b092-84921b709f2a"
+          />
+          <div
+            class="tripInfo"
+          >
+            <p
+              class="cityName"
+            >
+              Kyiv
+            </p>
+            <p
+              class="tripDates"
+            >
+              <span>
+                5/20/2024
+              </span>
+               - 
+              <span>
+                5/25/2024
+              </span>
+            </p>
+          </div>
+        </article>
+      </li>
+      <li
+        class="addTripItem"
+      >
+        <button
+          class="buttonIcon"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+            />
+          </svg>
+          <p
+            class="addTripTitle"
+          >
+            Add trip
+          </p>
+        </button>
+      </li>
+    </ul>
+  </main>
 </div>
 `;
