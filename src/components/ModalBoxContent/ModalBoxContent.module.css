@@ -1,11 +1,23 @@
 .content {
-  width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  padding: 0 24px 24px 24px;
 }
 .buttons-section {
   display: flex;
   justify-content: end;
   gap: 1rem;
+}
+.datePicker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }

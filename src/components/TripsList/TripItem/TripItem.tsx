@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import styles from './TripItem.module.css'
-import { Trip } from '../../../types'
+import { Trip } from '@app/types/types'
 
 const TripItem: FC<Trip> = ({ cityImgSrc, cityName, startDate, endDate }) => {
   const formattedStartDate = startDate.toLocaleDateString()

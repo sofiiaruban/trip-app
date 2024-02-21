@@ -68,9 +68,9 @@ export interface Day {
   conditions: string
   description: string
   icon: string
-  stations: string[]
+  stations: null | string[]
   source: string
-  hours: Hour[]
+  hours?: Hour[]
 }
 interface Stations {
   [key: string]: {
@@ -125,9 +125,9 @@ export interface WeatherData {
   address: string
   timezone: string
   tzoffset: number
-  description: string
+  description?: string
   days: Day[]
-  alerts: unknown[]
-  stations: Stations
-  currentConditions: CurrentConditions
+  alerts?: unknown[]
+  stations?: Stations
+  currentConditions?: CurrentConditions
 }

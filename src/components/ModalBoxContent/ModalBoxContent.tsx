@@ -6,7 +6,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 import styles from './ModalBoxContent.module.css'
 import Button from '../Buttons/Button'
 import { ButtonColor, ButtonType } from '../Buttons/constants'
-import { CityList } from '@app/data'
+import { CityList } from '@app/constants'
 
 interface Option {
   value: string
@@ -46,30 +46,49 @@ const ModalBoxContent: FC = () => {
 
   return (
     <form onSubmit={handleSubmitForm} className={styles.content}>
-      <Select
-        options={options}
-        value={formData.city}
-        onChange={(value) => handleInputChange('city', value)}
-      />
-      <DatePicker
-        showIcon
-        selected={formData.startDate}
-        onChange={(date) => handleInputChange('startDate', date)}
-        icon={<CiCalendar />}
-        selectsStart
-        startDate={formData.startDate}
-        endDate={formData.endDate}
-      />
-      <DatePicker
-        showIcon
-        selected={formData.endDate}
-        onChange={(date) => handleInputChange('endDate', date)}
-        icon={<CiCalendar />}
-        selectsEnd
-        startDate={formData.startDate}
-        endDate={formData.endDate}
-        minDate={formData.startDate}
-      />
+      <div className={styles.city}>
+        <label>
+          <span>*</span> City:
+        </label>
+        <Select
+          options={options}
+          value={formData.city}
+          onChange={(value) => handleInputChange('city', value)}
+          placeholder="Please select city"
+        />
+      </div>
+      <div className={styles.datePicker}>
+        <label>
+          <span>*</span> Start date:
+        </label>
+        <DatePicker
+          showIcon
+          selected={formData.startDate}
+          onChange={(date) => handleInputChange('startDate', date)}
+          icon={<CiCalendar />}
+          selectsStart
+          startDate={formData.startDate}
+          endDate={formData.endDate}
+          placeholderText="Select date"
+        />
+      </div>
+      <div className={styles.datePicker}>
+        <label>
+          <span>*</span> End Date:
+        </label>
+        <DatePicker
+          showIcon
+          selected={formData.endDate}
+          onChange={(date) => handleInputChange('endDate', date)}
+          icon={<CiCalendar />}
+          selectsEnd
+          startDate={formData.startDate}
+          endDate={formData.endDate}
+          minDate={formData.startDate}
+          placeholderText="Select date"
+        />
+      </div>
+
       <div className={styles['buttons-section']}>
         <Button
           type={ButtonType.RESET}

@@ -14,15 +14,14 @@
   height: fit-content;
   border-radius: 4px;
   z-index: 5;
-  padding: 10px 24px 24px 24px;
   position: relative;
   top: 80px;
   background-color: #fff;
 }
 .modalBoxHead {
-  padding: 10px;
-  width: 100%;
+  padding: 20px 0 10px 24px;
   border-bottom: 1px solid rgba(233, 229, 229, 0.8);
+  margin-bottom: 1rem;
 }
 .modalBoxTitle {
   margin-top: 0;
