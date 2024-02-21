@@ -6,6 +6,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 import styles from './ModalBoxContent.module.css'
 import Button from '../Buttons/Button'
 import { ButtonColor, ButtonType } from '../Buttons/constants'
+import { CityList } from '@app/data'
 
 interface Option {
   value: string
@@ -13,9 +14,9 @@ interface Option {
 }
 
 const options: Option[] = [
-  { value: 'kyiv', label: 'Kyiv' },
-  { value: 'lviv', label: 'Lviv' },
-  { value: 'odesa', label: 'Odesa' }
+  { value: CityList.KYIV, label: CityList.KYIV },
+  { value: CityList.NEW_YORK, label: CityList.NEW_YORK },
+  { value: CityList.LONDON, label: CityList.LONDON }
 ]
 
 interface FormData {

@@ -3,25 +3,37 @@
   height: 100%;
   width: 100vw;
   top: 0px;
-  background-color: grey;
-  opacity: 0.6;
+  left: 0;
+  background-color: rgba(24, 24, 24, 0.8);
   z-index: 4;
   display: flex;
   justify-content: center;
 }
 .modalBox {
-  width: 672px;
+  width: 500px;
   height: fit-content;
   border-radius: 4px;
   z-index: 5;
-  padding: 24px;
+  padding: 10px 24px 24px 24px;
   position: relative;
-  top: 48px;
+  top: 80px;
+  background-color: #fff;
 }
-.closeButton {
+.modalBoxHead {
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid rgba(233, 229, 229, 0.8);
+}
+.modalBoxTitle {
+  margin-top: 0;
+  font-weight: 600;
+  text-align: start;
+  padding: 0;
+}
+.buttonClose {
   box-sizing: border-box;
   border: none;
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 18px;
+  right: 16px;
 }
