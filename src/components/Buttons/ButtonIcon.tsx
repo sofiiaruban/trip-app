@@ -1,10 +1,10 @@
-import { FC, ReactNode } from 'react'
+import { FC, MouseEventHandler, ReactNode } from 'react'
 import { ButtonType } from './constants'
 import styles from './Buttons.module.css'
 
 interface ButtonIconProps {
   children: ReactNode
-  onClick?: () => void
+  onClick?: MouseEventHandler<HTMLElement>
   type?: ButtonType
 }
 

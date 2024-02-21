@@ -1,6 +1,12 @@
 import { FC } from 'react'
-import { WeatherForecastItemProps } from '../types'
 import moment from 'moment'
+
+interface WeatherForecastItemProps {
+  date: string
+  iconSrc: string
+  iconName: string
+  degree: string
+}
 
 const WeatherForecastItem: FC<WeatherForecastItemProps> = ({
   date,

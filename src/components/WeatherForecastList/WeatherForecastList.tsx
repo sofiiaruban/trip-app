@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import WeatherForecastItem from './WeatherForecastItem/WeatherForecastItem'
-import { DailyWeather } from './types'
 import styles from './WeatherForecastList.module.css'
+import { Day } from '@app/types/types'
 
 interface WeatherForecastListProps {
-  forecastList: DailyWeather[]
+  forecastList: Day[]
 }
 
 const WeatherForecastList: FC<WeatherForecastListProps> = ({
