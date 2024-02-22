@@ -1,6 +1,7 @@
+import { WeatherForecastProps } from '@app/types/types'
 import { FC } from 'react'
 
-const CurrentWeather: FC = () => {
+const CurrentWeather: FC<WeatherForecastProps> = ({day,iconSrc, degree}) => {
   return <div>CurrentWeather</div>
 }
 

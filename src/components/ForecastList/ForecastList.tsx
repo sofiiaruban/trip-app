@@ -1,24 +1,24 @@
 import { FC } from 'react'
-import WeatherForecastItem from './WeatherForecastItem/WeatherForecastItem'
+import ForecastCard from './ForecastCard/ForecastCard'
 import styles from './WeatherForecastList.module.css'
 import { Day } from '@app/types/types'
+import { ForecastCardType } from './constants'
 
-interface WeatherForecastListProps {
+interface ForecastListProps {
   forecastList: Day[]
 }
 
-const WeatherForecastList: FC<WeatherForecastListProps> = ({
-  forecastList
-}) => {
+const ForecastList: FC<ForecastListProps> = ({ forecastList }) => {
   return (
     <ul className={styles.list}>
       {forecastList.map((item) => (
         <li key={item.datetime}>
-          <WeatherForecastItem
+          <ForecastCard
             date={item.datetime}
             iconSrc={`@app/assets/${item.icon}.svg`}
             iconName={item.icon}
             degree={`${item.temp}/${item.feelslike}`}
+            type={ForecastCardType.SMALL}
           />
         </li>
       ))}
@@ -26,4 +26,4 @@ const WeatherForecastList: FC<WeatherForecastListProps> = ({
   )
 }
 
-export default WeatherForecastList
+export default ForecastList

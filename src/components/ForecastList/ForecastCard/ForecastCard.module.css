@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  .big {
+    background-color: rgba(29, 100, 172, 0.501);
+    width: 35%;
+    height: 80%;
+  }
+  .small {
+    padding: 0.5rem;
+  }
+}
+.day-big {
+  font-size: 24px;
+  font-weight: 600;
+}
+.day-small {
+  color: rgb(208, 194, 194);
+}
+.weatherInfo-big {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.weatherInfo-small {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.degree-big {
+  font-size: 30px;
+  font-weight: 500;
+}
+.degree-small {
+  color: gray;
+}
