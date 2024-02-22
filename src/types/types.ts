@@ -1,3 +1,6 @@
+import { ForecastCardType } from '@app/components/ForecastList/constants'
+import { ReactNode } from 'react'
+
 export interface Trip {
   cityImgSrc: string
   cityName: string
@@ -130,4 +133,12 @@ export interface WeatherData {
   alerts?: unknown[]
   stations?: Stations
   currentConditions?: CurrentConditions
+}
+export interface ForecastProps {
+  date: string
+  iconSrc: string
+  iconName: string
+  degree: string
+  type?: ForecastCardType
+  children?: ReactNode
 }
