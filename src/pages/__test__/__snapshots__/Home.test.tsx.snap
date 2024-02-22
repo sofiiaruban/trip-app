@@ -110,6 +110,68 @@ exports[`Renders the main page 1`] = `
           class="trip"
         >
           <img
+            alt="London city"
+            class="cityImg"
+            src="https://github.com/sofiiaruban/delivery-app/assets/37212452/6ddc7f4c-8b48-4146-890f-fc5124892c7a"
+          />
+          <div
+            class="tripInfo"
+          >
+            <p
+              class="cityName"
+            >
+              London
+            </p>
+            <p
+              class="tripDates"
+            >
+              <span>
+                4/23/2024
+              </span>
+               - 
+              <span>
+                4/29/2024
+              </span>
+            </p>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article
+          class="trip"
+        >
+          <img
+            alt="London city"
+            class="cityImg"
+            src="https://github.com/sofiiaruban/delivery-app/assets/37212452/6ddc7f4c-8b48-4146-890f-fc5124892c7a"
+          />
+          <div
+            class="tripInfo"
+          >
+            <p
+              class="cityName"
+            >
+              London
+            </p>
+            <p
+              class="tripDates"
+            >
+              <span>
+                4/18/2024
+              </span>
+               - 
+              <span>
+                4/25/2024
+              </span>
+            </p>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article
+          class="trip"
+        >
+          <img
             alt="Kyiv city"
             class="cityImg"
             src="https://github.com/sofiiaruban/delivery-app/assets/37212452/22af8aca-39f2-481a-b092-84921b709f2a"
@@ -164,6 +226,7 @@ exports[`Renders the main page 1`] = `
         </button>
       </li>
     </ul>
+    [{"cityImgSrc":"https://github.com/sofiiaruban/delivery-app/assets/37212452/d5c5a07f-e0e3-4731-aec2-905b550f0137","cityName":"New York","startDate":"2024-03-01T00:00:00.000Z","endDate":"2024-03-05T00:00:00.000Z"},{"cityImgSrc":"https://github.com/sofiiaruban/delivery-app/assets/37212452/6ddc7f4c-8b48-4146-890f-fc5124892c7a","cityName":"London","startDate":"2024-04-10T00:00:00.000Z","endDate":"2024-04-15T00:00:00.000Z"},{"cityImgSrc":"https://github.com/sofiiaruban/delivery-app/assets/37212452/6ddc7f4c-8b48-4146-890f-fc5124892c7a","cityName":"London","startDate":"2024-04-23T00:00:00.000Z","endDate":"2024-04-29T00:00:00.000Z"},{"cityImgSrc":"https://github.com/sofiiaruban/delivery-app/assets/37212452/6ddc7f4c-8b48-4146-890f-fc5124892c7a","cityName":"London","startDate":"2024-04-18T00:00:00.000Z","endDate":"2024-04-25T00:00:00.000Z"},{"cityImgSrc":"https://github.com/sofiiaruban/delivery-app/assets/37212452/22af8aca-39f2-481a-b092-84921b709f2a","cityName":"Kyiv","startDate":"2024-05-20T00:00:00.000Z","endDate":"2024-05-25T00:00:00.000Z"}]
   </main>
 </div>
 `;

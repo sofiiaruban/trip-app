@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-function getDayFromDate(date: string): string {
+const getDayFromDate = (date: string): string => {
   return moment(date).format('dddd')
 }
 

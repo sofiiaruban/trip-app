@@ -3,8 +3,8 @@ import styles from './TripItem.module.css'
 import { Trip } from '@app/types/types'
 
 const TripItem: FC<Trip> = ({ cityImgSrc, cityName, startDate, endDate }) => {
-  const formattedStartDate = startDate.toLocaleDateString()
-  const formattedEndDate = endDate.toLocaleDateString()
+  const formattedStartDate = new Date(startDate).toLocaleDateString()
+  const formattedEndDate = new Date(endDate).toLocaleDateString()
 
   return (
     <article className={styles.trip}>

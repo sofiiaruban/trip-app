@@ -1,5 +1,5 @@
-import { ChangeEvent, useCallback, useEffect, useState } from 'react'
-import { KeyCode } from './constants'
+import debounce from '@app/helpers/debounce'
+import { ChangeEvent, useEffect, useState } from 'react'
 
 interface SearchHookReturnType {
   inputValue: string
@@ -15,28 +15,20 @@ const useSearch = (onSearch: (value: string) => void): SearchHookReturnType => {
     setInputValue(e.target.value)
   }
 
-  const onEnterClick: (e: KeyboardEvent) => void = useCallback(
-    (e) => {
-      if (e.code === KeyCode.ENTER) {
-        onSearchHandle()
-      }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [trimmedValue, onSearch]
-  )
-
   useEffect(() => {
-    window.addEventListener('keydown', onEnterClick)
+    const handler = debounce(() => {
+      onSearch(trimmedValue)
+    }, 300)
+
+    window.addEventListener('keydown', handler)
 
     return () => {
-      window.removeEventListener('keydown', onEnterClick)
+      window.removeEventListener('keydown', handler)
     }
-  }, [onEnterClick])
+  }, [trimmedValue, onSearch])
 
   const onSearchHandle = () => {
-    if (trimmedValue) {
-      onSearch(trimmedValue)
-    }
+    onSearch(trimmedValue)
   }
 
   return {

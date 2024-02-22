@@ -20,8 +20,8 @@ const TripsList: FC<TripsProps> = ({ trips }) => {
 
   return (
     <ul className={styles.tripsList}>
-      {trips.map((trip) => (
-        <li key={trip.cityName}>
+      {trips.map((trip, index) => (
+        <li key={`${trip.cityName}${index}`}>
           <TripItem
             cityImgSrc={trip.cityImgSrc}
             cityName={trip.cityName}
