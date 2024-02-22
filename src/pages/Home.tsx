@@ -1,20 +1,32 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { MAIN_PAGE_TEST_ID } from './constants'
 import Search from '@app/components/Search/Search'
 import TripsList from '@app/components/TripsList/TripsList'
 import styles from './Home.module.css'
 //import { useGetWeatherDataByNameQuery } from '@app/services/weatherDataApi'
 import initialTrips from '@app/initialTrips'
-//import { useSelector } from 'react-redux'
-//import { RootState } from '@app/store/store'
+import { useSelector } from 'react-redux'
+import { RootState } from '@app/store/store'
+import filterTripsByCityName from '@app/helpers/filterTripsByCityName'
+import sortTripsByStartDate from '@app/helpers/sortTripsByDate'
+//import sortTripsByStartDate from '@app/helpers/sortTripsByDate'
 //import { useGetWeatherDateRangeQuery } from '@app/services/weatherDataApi'
 
 const Home: FC = () => {
+  const selectTrips = (state: RootState) => state.trips
+  const trips = useSelector(selectTrips)
+  const sample = trips
+  const [filteredTrips, setFilteredTrips] = useState(sample) //initialTrips
+
   const onSearch: (value: string) => void = (value) => {
-    console.log('Пошук за значенням:', value)
+    console.log('Searching for:', value)
+    const filteredList = filterTripsByCityName(sample, value)
+    const sortedList = sortTripsByStartDate(filteredList)
+    setFilteredTrips(sortedList)
   }
-  //const selectTrips = (state: RootState) => state.trips
-  //const data = useSelector(selectTrips)
+  console.log(trips)
+  console.log(initialTrips)
+  //const sorted = sortTripsByStartDate(initialTrips)
   //useGetWeatherDateRangeQuery, useGetWeatherTodayQuery
   //const { data, error, isLoading } = useGetWeatherDateRangeQuery({
   //  cityName: 'kyiv',
@@ -25,7 +37,8 @@ const Home: FC = () => {
   return (
     <main data-testid={MAIN_PAGE_TEST_ID} className={styles.home}>
       <Search placeholder="Search your trip" onSearch={onSearch} />
-      <TripsList trips={initialTrips} />
+      <TripsList trips={filteredTrips} />
+      {JSON.stringify(trips)}
     </main>
   )
 }
