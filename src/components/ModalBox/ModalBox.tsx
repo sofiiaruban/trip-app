@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { IoClose } from 'react-icons/io5'
 import styles from './ModalBox.module.css'
 import ButtonIcon from '../Buttons/ButtonIcon'
+import { MODAL_BOX_TEST_ID } from './constants'
 
 interface ModalProps {
   title: string
@@ -21,7 +22,7 @@ const ModalBox: FC<ModalProps> = ({ isOpen, title, children, closeModal }) => {
   }
 
   return createPortal(
-    <div onClick={closeModal} className={styles.modalOverlay}>
+    <div onClick={closeModal} className={styles.modalOverlay} data-testid={MODAL_BOX_TEST_ID}>
       <div
         onClick={modalBoxPropagationHandle}
         className={styles.modalBox}

@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TripsList matches snapshot 1`] = `
+<div>
+  <div
+    class="tripsListContainer"
+  >
+    <ul
+      class="tripsList"
+    >
+      <li>
+        <article
+          class="trip active"
+        >
+          <img
+            alt="KYIV city"
+            class="cityImg"
+            src="/src"
+          />
+          <div
+            class="tripInfo"
+          >
+            <p
+              class="cityName"
+            >
+              KYIV
+            </p>
+            <p
+              class="tripDates"
+            >
+              <span>
+                Invalid Date
+              </span>
+               - 
+              <span>
+                Invalid Date
+              </span>
+            </p>
+          </div>
+        </article>
+      </li>
+    </ul>
+    <div
+      class="addTripItem"
+    >
+      <button
+        class="buttonIcon"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+          />
+        </svg>
+        <p
+          class="addTripTitle"
+        >
+          Add trip
+        </p>
+      </button>
+    </div>
+  </div>
+</div>
+`;

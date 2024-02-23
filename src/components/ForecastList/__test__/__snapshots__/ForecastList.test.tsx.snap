@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastList matches snapshot 1`] = `
+<div>
+  <ul
+    class="list"
+  >
+    <li>
+      <article
+        class="card small"
+      >
+        <p
+          class="day-small"
+        >
+          Sunday
+        </p>
+        <div
+          class="weatherInfo-small"
+        >
+          <img
+            alt="clear"
+            class="img-small"
+            src="src/assets/clear.svg"
+          />
+          <p
+            class="degree-small"
+          >
+            25/22
+             
+            <span>
+              °F
+            </span>
+          </p>
+        </div>
+      </article>
+    </li>
+  </ul>
+</div>
+`;
