@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TripItem matches snapshot 1`] = `
+<div>
+  <article
+    class="trip"
+  >
+    <img
+      alt="KYIV city"
+      class="cityImg"
+      src="/src"
+    />
+    <div
+      class="tripInfo"
+    >
+      <p
+        class="cityName"
+      >
+        KYIV
+      </p>
+      <p
+        class="tripDates"
+      >
+        <span>
+          Invalid Date
+        </span>
+         - 
+        <span>
+          Invalid Date
+        </span>
+      </p>
+    </div>
+  </article>
+</div>
+`;
