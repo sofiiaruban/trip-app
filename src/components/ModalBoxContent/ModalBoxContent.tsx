@@ -7,6 +7,9 @@ import styles from './ModalBoxContent.module.css'
 import Button from '../Buttons/Button'
 import { ButtonColor, ButtonType } from '../Buttons/constants'
 import { CityList } from '@app/constants'
+import findImgUrlByCity from '@app/helpers/findImgUrlByCity'
+import { addTrip } from '@app/store/tripSlice'
+import { useDispatch } from 'react-redux'
 
 interface Option {
   value: string
@@ -21,15 +24,19 @@ const options: Option[] = [
 
 interface FormData {
   city: Option | null
-  startDate: Date | null
-  endDate: Date | null
+  startDate: Date
+  endDate: Date
 }
+interface ModalBoxContentProps {
+  closeModal: () => void
+}
+const ModalBoxContent: FC<ModalBoxContentProps> = ({ closeModal }) => {
+  const dispatch = useDispatch()
 
-const ModalBoxContent: FC = () => {
   const [formData, setFormData] = useState<FormData>({
     city: null,
-    startDate: null,
-    endDate: null
+    startDate: new Date(),
+    endDate: new Date()
   })
 
   const handleInputChange = (fieldName: keyof FormData, value: unknown) => {
@@ -41,7 +48,19 @@ const ModalBoxContent: FC = () => {
 
   const handleSubmitForm = (event: FormEvent) => {
     event.preventDefault()
-    console.log(formData)
+    if (formData.city) {
+      const cityImgSrc = findImgUrlByCity(formData.city.value)
+      if (cityImgSrc) {
+        const tripData = {
+          cityImgSrc,
+          cityName: formData.city.label,
+          startDate: formData.startDate!,
+          endDate: formData.endDate!
+        }
+        dispatch(addTrip(tripData))
+        closeModal()
+      }
+    }
   }
 
   return (
@@ -88,12 +107,12 @@ const ModalBoxContent: FC = () => {
           placeholderText="Select date"
         />
       </div>
-
       <div className={styles['buttons-section']}>
         <Button
           type={ButtonType.RESET}
           title="Cancel"
           color={ButtonColor.BASIC}
+          onClick={closeModal}
         />
         <Button title="Save" />
       </div>

@@ -8,7 +8,7 @@ interface ModalProps {
   title: string
   isOpen: boolean
   children: ReactNode
-  closeModal: MouseEventHandler<HTMLElement>
+  closeModal: MouseEventHandler<HTMLElement> 
 }
 
 const ModalBox: FC<ModalProps> = ({ isOpen, title, children, closeModal }) => {
