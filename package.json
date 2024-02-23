@@ -21,6 +21,7 @@
     "classnames": "^2.5.1",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "jest-environment-jsdom": "^29.7.0",
+    "jsx-runtime": "^1.2.0",
     "moment": "^2.30.1",
     "react": "^18.2.0",
     "react-countdown": "^2.3.5",
