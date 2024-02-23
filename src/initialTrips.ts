@@ -21,12 +21,6 @@ const initialTrips: Trip[] = [
     endDate: new Date('2024-04-29')
   },
   {
-    cityImgSrc: CityImg.LONDON,
-    cityName: CityList.LONDON,
-    startDate: new Date('2024-04-18'),
-    endDate: new Date('2024-04-25')
-  },
-  {
     cityImgSrc: CityImg.KYIV,
     cityName: CityList.KYIV,
     startDate: new Date('2024-05-20'),

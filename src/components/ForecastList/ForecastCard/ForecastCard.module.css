@@ -8,7 +8,7 @@
   &.big {
     justify-content: center;
     align-items: center;
-    background-color: rgb(25, 47, 69);
+    background-color: rgb(19, 35, 52);
     width: 100%;
     height: 100%;
     padding: 0.5rem;
@@ -19,7 +19,7 @@
   font-weight: 600;
 }
 .day-small {
-  color: rgb(121, 115, 115);
+  color: rgb(44, 43, 43);
 }
 .weatherInfo-big {
   display: flex;
@@ -37,7 +37,7 @@
   margin-bottom: 0;
 }
 .degree-small {
-  color: gray;
+  color: rgb(63, 62, 62);
 }
 .img-small {
   height: 50px;
