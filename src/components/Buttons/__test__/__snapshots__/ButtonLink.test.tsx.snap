@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonLink component matches snapshot 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    <button
+      type="button"
+    >
+      Button Link
+    </button>
+  </a>
+</div>
+`;

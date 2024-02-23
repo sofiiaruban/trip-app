@@ -13,7 +13,7 @@ const Search: FC<SearchProps> = ({ placeholder, onSearch }) => {
   const { inputValue, onInputChange, onSearchHandle } = useSearch(onSearch)
 
   return (
-    <div>
+    <div className={styles.container}>
       <input
         type="text"
         placeholder={placeholder}

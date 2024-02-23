@@ -1,6 +1,9 @@
 .list {
   display: flex;
-  gap: 0.5rem;
+  gap: 2rem;
   list-style-type: none;
-  width: 65%;
+  width: 85%;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
 }

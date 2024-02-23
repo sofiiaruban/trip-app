@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import TripItem from './TripItem/TripItem'
 import { Trip } from '../../types/types'
 import styles from './TripsList.module.css'
@@ -10,16 +10,18 @@ import useModal from '../ModalBox/useModalBox'
 
 interface TripsProps {
   trips: Trip[]
+  activeIndex: number
+  setActive: (index: number) => void
 }
-const TripsList: FC<TripsProps> = ({ trips }) => {
+
+const TripsList: FC<TripsProps> = ({ trips, activeIndex, setActive }) => {
   const { isOpen, openModal, closeModal } = useModal()
-  const [activeIndex, setActiveIndex] = useState(0)
 
   const modalHandler = () => {
     openModal()
   }
   const handleTripItemClick = (index: number) => {
-    setActiveIndex(index)
+    setActive(index)
   }
 
   return (

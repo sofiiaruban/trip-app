@@ -1,10 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 .input {
   width: 30%;
   height: 30px;
   border: 2px solid hsl(0, 0%, 80%);
   padding: 0.5rem 1.9rem;
   color: #000;
-  position: relative;
   border-radius: 0.5rem;
   background-color: hsl(0, 0%, 90%);
 }
@@ -14,8 +18,8 @@
 }
 .searchButtonIcon {
   position: absolute;
-  top: 1.3rem;
-  left: 0.5rem;
+  top: 0.9rem;
+  left: 0;
 }
 .searchIcon {
   width: 1.3rem;
