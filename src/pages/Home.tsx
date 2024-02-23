@@ -1,7 +1,5 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, Suspense, lazy, useEffect, useState } from 'react'
 import { MAIN_PAGE_TEST_ID } from './constants'
-import Search from '@app/components/Search/Search'
-import TripsList from '@app/components/TripsList/TripsList'
 import styles from './Home.module.css'
 import { useSelector } from 'react-redux'
 import { RootState } from '@app/store/store'
@@ -13,10 +11,17 @@ import {
   useGetWeatherTodayQuery
 } from '@app/services/weatherDataApi'
 import getYearMonthDayDate from '@app/helpers/getYearMonthDayDate'
-import ForecastList from '@app/components/ForecastList/ForecastList'
-import ForecastCard from '@app/components/ForecastList/ForecastCard/ForecastCard'
 import { ForecastCardType } from '@app/components/ForecastList/constants'
 import CountdownComponent from '@app/components/Countdown/Countdown'
+
+const Search = lazy(() => import('@app/components/Search/Search'))
+const TripsList = lazy(() => import('@app/components/TripsList/TripsList'))
+const ForecastList = lazy(
+  () => import('@app/components/ForecastList/ForecastList')
+)
+const ForecastCard = lazy(
+  () => import('@app/components/ForecastList/ForecastCard/ForecastCard')
+)
 
 const Home: FC = () => {
   const selectTrips = (state: RootState) => state.trips
@@ -52,40 +57,48 @@ const Home: FC = () => {
         <p className={styles.mainTitle}>
           Weather <b>Forecast</b>
         </p>
-        <Search placeholder="Search your trip" onSearch={onSearch} />
-        <TripsList
-          trips={filteredTrips}
-          activeIndex={activeIndex}
-          setActive={setActive}
-        />
+        <Suspense fallback={<div>Loading Search...</div>}>
+          <Search placeholder="Search your trip" onSearch={onSearch} />
+        </Suspense>
+        <Suspense fallback={<div>Loading TripsList...</div>}>
+          <TripsList
+            trips={filteredTrips}
+            activeIndex={activeIndex}
+            setActive={setActive}
+          />
+        </Suspense>
         <p className={styles.title}>Week</p>
-        {error ? (
-          <>Oh no, there was an error</>
-        ) : isLoading ? (
-          <>Loading...</>
-        ) : data ? (
-          <ForecastList forecastList={data?.days} />
-        ) : null}
+        <Suspense fallback={<div>Loading ForecastList...</div>}>
+          {error ? (
+            <>Oh no, there was an error</>
+          ) : isLoading ? (
+            <>Loading...</>
+          ) : data ? (
+            <ForecastList forecastList={data?.days} />
+          ) : null}
+        </Suspense>
       </main>
       <aside className={styles.aside}>
-        {isError ? (
-          <>Oh no, there was an error</>
-        ) : isLoader ? (
-          <>Loading...</>
-        ) : dailyWeather ? (
-          <ForecastCard
-            date={dailyWeather.days[0].datetime}
-            iconSrc={`src/assets/${dailyWeather.days[0].icon}.svg`}
-            iconName={dailyWeather.days[0].icon}
-            degree={`${dailyWeather.days[0].temp}`}
-            type={ForecastCardType.BIG}
-          >
-            <p className={styles.cityTitle}>{dailyWeather.address}</p>
-            <CountdownComponent
-              date={new Date(filteredTrips[activeIndex].startDate)}
-            />
-          </ForecastCard>
-        ) : null}
+        <Suspense fallback={<div>Loading ForecastCard...</div>}>
+          {isError ? (
+            <>Oh no, there was an error</>
+          ) : isLoader ? (
+            <>Loading...</>
+          ) : dailyWeather ? (
+            <ForecastCard
+              date={dailyWeather.days[0].datetime}
+              iconSrc={`src/assets/${dailyWeather.days[0].icon}.svg`}
+              iconName={dailyWeather.days[0].icon}
+              degree={`${dailyWeather.days[0].temp}`}
+              type={ForecastCardType.BIG}
+            >
+              <p className={styles.cityTitle}>{dailyWeather.address}</p>
+              <CountdownComponent
+                date={new Date(filteredTrips[activeIndex].startDate)}
+              />
+            </ForecastCard>
+          ) : null}
+        </Suspense>
       </aside>
     </div>
   )
