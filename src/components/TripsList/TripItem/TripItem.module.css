@@ -4,6 +4,10 @@
   gap: 1rem;
   border: 1px solid rgba(128, 128, 128, 0.2);
   flex-basis: auto;
+  width: 200px;
+  &.active {
+    border: 2px solid rgb(16, 16, 211);
+  }
 }
 .tripInfo {
   padding: 0.5rem;
@@ -11,7 +15,7 @@
 .cityImg {
   width: 100%;
   max-height: 15rem;
-  object-fit: cover;
+  object-fit: fit;
 }
 .cityName {
   font-weight: 600;

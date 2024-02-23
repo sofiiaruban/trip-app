@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, MouseEventHandler } from 'react'
 import classnames from 'classnames'
 import styles from './Buttons.module.css'
 
@@ -8,17 +8,19 @@ interface ButtonProps {
   title: string
   color?: ButtonColor
   type?: ButtonType
+  onClick?: MouseEventHandler<HTMLElement>
 }
 
 const Button: FC<ButtonProps> = ({
   title,
+  onClick,
   color = ButtonColor.PRIMARY,
   type = ButtonType.SUBMIT
 }) => {
   const buttonClasses = classnames(styles.button, styles[`${color}`])
 
   return (
-    <button type={type} className={buttonClasses}>
+    <button type={type} onClick={onClick} className={buttonClasses}>
       {title}
     </button>
   )

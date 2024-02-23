@@ -1,38 +1,38 @@
-import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
-import {MouseEventHandler, useEffect, useState} from 'react';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import { useEffect, useState } from 'react'
 
 interface ModalHookReturnType {
-  openModal: () => void;
-  closeModal: MouseEventHandler<HTMLElement>;
-  isOpen: boolean;
+  openModal: () => void
+  closeModal: () => void
+  isOpen: boolean
 }
 
 const useModal = (): ModalHookReturnType => {
-  const [isOpen, setIsModalOpen] = useState(false);
+  const [isOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     if (isOpen) {
-      disableBodyScroll(document.body);
+      disableBodyScroll(document.body)
 
       return () => {
-        enableBodyScroll(document.body);
-      };
+        enableBodyScroll(document.body)
+      }
     }
-  }, [isOpen]);
+  }, [isOpen])
 
   const openModal = () => {
-    setIsModalOpen(true);
-  };
+    setIsModalOpen(true)
+  }
 
   const closeModal = () => {
-    setIsModalOpen(false);
-  };
+    setIsModalOpen(false)
+  }
 
   return {
     openModal,
     closeModal,
-    isOpen,
-  };
-};
+    isOpen
+  }
+}
 
-export default useModal;
+export default useModal

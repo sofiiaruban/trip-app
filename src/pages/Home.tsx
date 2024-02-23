@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { MAIN_PAGE_TEST_ID } from './constants'
 import Search from '@app/components/Search/Search'
 import TripsList from '@app/components/TripsList/TripsList'
@@ -15,12 +15,14 @@ import sortTripsByStartDate from '@app/helpers/sortTripsByDate'
 const Home: FC = () => {
   const selectTrips = (state: RootState) => state.trips
   const trips = useSelector(selectTrips)
-  const sample = trips
-  const [filteredTrips, setFilteredTrips] = useState(sample) //initialTrips
+  const [filteredTrips, setFilteredTrips] = useState(trips)
+
+  useEffect(() => {
+    setFilteredTrips(trips)
+  }, [trips])
 
   const onSearch: (value: string) => void = (value) => {
-    console.log('Searching for:', value)
-    const filteredList = filterTripsByCityName(sample, value)
+    const filteredList = filterTripsByCityName(trips, value)
     const sortedList = sortTripsByStartDate(filteredList)
     setFilteredTrips(sortedList)
   }
@@ -38,7 +40,6 @@ const Home: FC = () => {
     <main data-testid={MAIN_PAGE_TEST_ID} className={styles.home}>
       <Search placeholder="Search your trip" onSearch={onSearch} />
       <TripsList trips={filteredTrips} />
-      {JSON.stringify(trips)}
     </main>
   )
 }
