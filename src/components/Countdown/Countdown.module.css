@@ -1,0 +1,21 @@
+.countdown {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+.unitValue {
+  font-weight: 300;
+}
+.unit {
+  font-weight: 200;
+  margin: 0;
+  text-transform: uppercase;
+}
+.valueContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

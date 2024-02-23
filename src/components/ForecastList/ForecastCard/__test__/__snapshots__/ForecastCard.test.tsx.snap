@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastCard matches snapshot 1`] = `
+<div>
+  <article
+    class="card small"
+  >
+    <p
+      class="day-small"
+    >
+      Sunday
+    </p>
+    <div
+      class="weatherInfo-small"
+    >
+      <img
+        alt="mock-icon-name"
+        class="img-small"
+        src="mock-icon-src"
+      />
+      <p
+        class="degree-small"
+      >
+        25
+         
+        <span>
+          °F
+        </span>
+      </p>
+    </div>
+    <div>
+      Mock children
+    </div>
+  </article>
+</div>
+`;

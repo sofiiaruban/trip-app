@@ -1,6 +1,6 @@
 import Countdown from 'react-countdown'
 import { CountdownProps } from './constants'
-import styles from './Coundown.module.css'
+import styles from './Countdown.module.css'
 
 interface CountdownRendererProps {
   days: number
@@ -26,9 +26,9 @@ const CountdownComponent = ({ date }: { date: Date }) => {
     return (
       <ul className={styles.countdown}>
         {Object.values(CountdownProps).map((unit) => (
-          <div key={unit}>
-            <p className={styles.unitValue}>{unit}</p>
-            <p className={styles.unit}>{countdownValues[unit]}</p>
+          <div key={unit} className={styles.valueContainer}>
+            <p className={styles.unitValue}>{countdownValues[unit]}</p>
+            <p className={styles.unit}>{unit}</p>
           </div>
         ))}
       </ul>

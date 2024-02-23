@@ -1,6 +1,6 @@
 .tripsListContainer {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 .tripsList {
   list-style-type: none;
@@ -10,20 +10,21 @@
   gap: 1rem;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 50%;
-  padding: 1rem;
+  width: 70%;
+  padding: 1rem 0;
 }
 .addTripItem {
   background-color: rgba(128, 128, 128, 0.6);
   width: 120px;
-  height: 50%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
   padding: 2rem 2rem;
-  margin: 1rem;
+  margin-top: 1rem;
 }
+
 .addTripTitle {
   font-weight: 600;
   font-size: medium;

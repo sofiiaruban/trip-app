@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import ForecastCard from './ForecastCard/ForecastCard'
-import styles from './WeatherForecastList.module.css'
+import styles from './ForecastList.module.css'
 import { Day } from '@app/types/types'
 import { ForecastCardType } from './constants'
 
@@ -15,7 +15,7 @@ const ForecastList: FC<ForecastListProps> = ({ forecastList }) => {
         <li key={item.datetime}>
           <ForecastCard
             date={item.datetime}
-            iconSrc={`@app/assets/${item.icon}.svg`}
+            iconSrc={`src/assets/${item.icon}.svg`}
             iconName={item.icon}
             degree={`${item.temp}/${item.feelslike}`}
             type={ForecastCardType.SMALL}
