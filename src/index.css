@@ -49,10 +49,18 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
 input {
   border: 1px solid hsl(0, 0%, 80%);
   color: hsl(0, 0%, 20%);
 }
 .react-datepicker-wrapper {
+  width: 100%;
+}
+.react-datepicker__view-calendar-icon input {
+  padding: 7px 10px 7px 25px;
+  width: 92%;
+}
+.react-datepicker-ignore-onclickoutside {
   width: 100%;
 }

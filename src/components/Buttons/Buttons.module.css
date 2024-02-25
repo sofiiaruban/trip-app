@@ -17,3 +17,8 @@
   border: none;
   background-color: transparent;
 }
+
+.buttonIcon:focus,
+.buttonIcon:focus-visible {
+  outline: none;
+}
