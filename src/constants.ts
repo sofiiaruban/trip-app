@@ -5,7 +5,7 @@ export enum CityList {
 }
 
 export enum CityImg {
-  NEW_YORK = 'src/assets/newyork.jpeg',
-  LONDON = 'src/assets/london.jpg',
-  KYIV = 'src/assets/kyiv.jpg'
+  NEW_YORK = 'trip-app/src/assets/newyork.jpeg',
+  LONDON = 'trip-app/src/assets/london.jpg',
+  KYIV = 'trip-app/src/assets/kyiv.jpg'
 }
