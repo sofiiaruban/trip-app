@@ -15,7 +15,7 @@ const ForecastList: FC<ForecastListProps> = ({ forecastList }) => {
         <li key={item.datetime}>
           <ForecastCard
             date={item.datetime}
-            iconSrc={`trip-app/src/assets/${item.icon}.svg`}
+            iconSrc={`assets/${item.icon}.svg`}
             iconName={item.icon}
             degree={`${item.temp}/${item.feelslike}`}
             type={ForecastCardType.SMALL}

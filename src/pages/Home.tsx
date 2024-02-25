@@ -87,7 +87,7 @@ const Home: FC = () => {
           ) : dailyWeather ? (
             <ForecastCard
               date={dailyWeather.days[0].datetime}
-              iconSrc={`src/assets/${dailyWeather.days[0].icon}.svg`}
+              iconSrc={`assets/${dailyWeather.days[0].icon}.svg`}
               iconName={dailyWeather.days[0].icon}
               degree={`${dailyWeather.days[0].temp}`}
               type={ForecastCardType.BIG}
