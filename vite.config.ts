@@ -5,8 +5,8 @@ import EnvironmentPlugin from 'vite-plugin-environment'
 // https://vitejs.dev/config/
 
 export default defineConfig({
-  base: '/trip-app',
   plugins: [react(), EnvironmentPlugin('all')],
+  base: '/trip-app/',
   resolve: {
     alias: {
       '@app': fileURLToPath(new URL('./src', import.meta.url))
