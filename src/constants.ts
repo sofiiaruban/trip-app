@@ -7,5 +7,5 @@ export enum CityList {
 export enum CityImg {
   NEW_YORK = 'assets/newyork.jpeg',
   LONDON = 'assets/london.jpg',
-  KYIV = '/kyiv.jpg'
+  KYIV = './kyiv.jpg'
 }
