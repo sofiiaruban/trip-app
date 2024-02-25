@@ -53,3 +53,10 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+input {
+  border: 1px solid hsl(0, 0%, 80%);
+  color: hsl(0, 0%, 20%);
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
