@@ -38,7 +38,6 @@ const Home: FC = () => {
     const sortedList = sortTripsByStartDate(filteredList)
     setFilteredTrips(sortedList)
   }
-  console.log(trips)
   const { data, error, isLoading } = useGetWeatherDateRangeQuery({
     cityName: filteredTrips[activeIndex].cityName,
     fromDate: getYearMonthDayDate(filteredTrips[activeIndex].startDate),

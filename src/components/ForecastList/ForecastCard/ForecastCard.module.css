@@ -24,6 +24,10 @@
 .weatherInfo-big {
   display: flex;
   gap: 0.5rem;
+  @media (max-width: 790px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .weatherInfo-small {

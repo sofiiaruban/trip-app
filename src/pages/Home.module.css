@@ -1,6 +1,12 @@
 .container {
   display: flex;
   margin: 1rem 2rem;
+  @media (max-width: 1300px) {
+    margin: 1rem;
+  }
+  @media (max-width: 1030px) {
+    margin: 1rem 0 1rem 1rem;
+  }
 }
 
 .home {

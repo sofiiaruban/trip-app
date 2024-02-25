@@ -26,10 +26,10 @@ const CountdownComponent = ({ date }: { date: Date }) => {
     return (
       <ul className={styles.countdown}>
         {Object.values(CountdownProps).map((unit) => (
-          <div key={unit} className={styles.valueContainer}>
+          <li key={unit} className={styles.valueContainer}>
             <p className={styles.unitValue}>{countdownValues[unit]}</p>
             <p className={styles.unit}>{unit}</p>
-          </div>
+          </li>
         ))}
       </ul>
     )
