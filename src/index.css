@@ -62,8 +62,8 @@ input {
   width: 92%;
 }
 .react-datepicker__input-container input {
-  width: 100%;
+  width: 96%;
   padding: 0.5rem;
   height: 18px;
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
 }
