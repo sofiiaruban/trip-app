@@ -35,7 +35,7 @@ Access my site at  [Trip App](https://sofiiaruban.github.io/trip-app/)
 # Getting Started
 
 ## Clone the repository
-git clone [https://github.com/sofiiaruban/food-mentor.git](https://github.com/sofiiaruban/trip-app.git)
+git clone https://github.com/sofiiaruban/trip-app.git
 
 ## Navigate to the project folder
 cd trip-app
