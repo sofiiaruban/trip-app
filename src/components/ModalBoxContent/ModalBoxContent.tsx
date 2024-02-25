@@ -1,7 +1,6 @@
 import { FC, FormEvent, useState } from 'react'
 import Select from 'react-select'
 import DatePicker from 'react-datepicker'
-import { CiCalendar } from 'react-icons/ci'
 import 'react-datepicker/dist/react-datepicker.css'
 import styles from './ModalBoxContent.module.css'
 import Button from '../Buttons/Button'
@@ -74,6 +73,7 @@ const ModalBoxContent: FC<ModalBoxContentProps> = ({ closeModal }) => {
           value={formData.city}
           onChange={(value) => handleInputChange('city', value)}
           placeholder="Please select city"
+          required
         />
       </div>
       <div className={styles.datePicker}>
@@ -81,14 +81,13 @@ const ModalBoxContent: FC<ModalBoxContentProps> = ({ closeModal }) => {
           <span>*</span> Start date:
         </label>
         <DatePicker
-          showIcon
           selected={formData.startDate}
           onChange={(date) => handleInputChange('startDate', date)}
-          icon={<CiCalendar />}
           selectsStart
           startDate={formData.startDate}
           endDate={formData.endDate}
           placeholderText="Select date"
+          required
         />
       </div>
       <div className={styles.datePicker}>
@@ -96,15 +95,14 @@ const ModalBoxContent: FC<ModalBoxContentProps> = ({ closeModal }) => {
           <span>*</span> End Date:
         </label>
         <DatePicker
-          showIcon
           selected={formData.endDate}
           onChange={(date) => handleInputChange('endDate', date)}
-          icon={<CiCalendar />}
           selectsEnd
           startDate={formData.startDate}
           endDate={formData.endDate}
           minDate={formData.startDate}
           placeholderText="Select date"
+          required
         />
       </div>
       <div className={styles['buttons-section']}>
