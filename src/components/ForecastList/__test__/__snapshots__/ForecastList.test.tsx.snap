@@ -20,7 +20,7 @@ exports[`ForecastList matches snapshot 1`] = `
           <img
             alt="clear"
             class="img-small"
-            src="/clear.svg"
+            src="./clear.svg"
           />
           <p
             class="degree-small"
